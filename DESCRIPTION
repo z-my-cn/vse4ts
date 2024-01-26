@@ -1,12 +1,17 @@
 Package: vse4ts
-Title: What the Package Does (One Line, Title Case)
+Title: Identify memory patterns in time series using variance scaling exponents
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Authors@R: c(
+    person(given = "Mengyang", family = "Zheng", email = "meyazheng@163.com", role = c("aut", "cre")),
+    person(given = "Hui", family = "Fu", email = "hui_fu@hotmail.com", role = c("aut"))
+    )
+Description: Constructing strong and weak variance scaling exponents, it 
+    achieves the identification of memory patterns in time series, especially 
+    the identification of long memory.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
