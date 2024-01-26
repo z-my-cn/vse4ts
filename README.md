@@ -18,7 +18,7 @@ You can install the development version of vse4ts from
 
 ``` r
 # install.packages("devtools")
-# devtools::install_github("your-github-username/vse4ts")
+# devtools::install_github("z-my-cn/vse4ts")
 ```
 
 ## Example
