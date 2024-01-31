@@ -3,11 +3,11 @@
 #' @param R A time series vector.
 #'
 #' @return The weak variance scaling exponent.
-#' @export
 #'
 #' @examples
 #' x <- rnorm(1024)
 #' wvse(x)
+#' @export
 wvse <- function(R){
     TS <- R
     vartss <- function(TS,i){
@@ -38,5 +38,5 @@ wvse <- function(R){
         sum((y - theta[1]*x^(2*theta[2]))^2)
     }
     out <- stats::nlminb(c(1,0.5), fn, x = ts$tsn[1:n], y = ts$tsvar[1:n]/ts$tsvar[1])
-    out$par[2]
+    return(out$par[2])
 }
