@@ -1,9 +1,9 @@
-#' Calculate variance scaling exponents
+#' Calculate variance scaling exponent
 #'
 #' @param x A time series vector.
 #' @param m A parameter to control the number of scales. Default is 0.5.
 #'
-#' @return The weak variance scaling exponent.
+#' @return The variance scaling exponent.
 #'
 #' @examples
 #' x <- rnorm(1024)
