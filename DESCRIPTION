@@ -1,6 +1,6 @@
 Package: vse4ts
 Title: Identify Memory Patterns in Time Series Using VSE
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: c(
     person(given = "Mengyang", family = "Zheng", email = "meyazheng@163.com", role = c("aut", "cre")),
     person(given = "Hui", family = "Fu", email = "hui_fu@hotmail.com", role = c("aut"))
