@@ -1,14 +1,13 @@
-#' Calculate variance scaling exponent
-#'
+#' @title Variance Scale Exponent
+#' @description
+#' Calculate the variance scaling exponent of a time series.
 #' @param x A time series vector.
 #' @param m A parameter to control the number of scales. Default is 0.5.
-#'
-#' @return The variance scaling exponent.
-#'
+#' @return A list containing the variance scaling exponent.
 #' @examples
+#' set.seed(123)
 #' x <- rnorm(1024)
 #' vse(x)
-#'
 #' @importFrom stats nlminb var
 #'
 #' @export

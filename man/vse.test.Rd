@@ -2,7 +2,7 @@
 % Please edit documentation in R/vse.test.R
 \name{vse.test}
 \alias{vse.test}
-\title{Use the variance scale exponent method to construct a hypothesis test about long memory in time series}
+\title{Variance Scale Exponent Test}
 \usage{
 vse.test(x, m = 0.5)
 }
@@ -15,10 +15,10 @@ vse.test(x, m = 0.5)
 A list containing the statistic, degree of freedom, and p-value.
 }
 \description{
-Use the variance scale exponent method to construct a hypothesis test about long memory in time series
+Use the variance scale exponent method to construct a hypothesis test about long memory in time series.
 }
 \examples{
+set.seed(123)
 x <- rnorm(1024)
 vse.test(x)
-
 }

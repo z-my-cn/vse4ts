@@ -2,7 +2,7 @@
 % Please edit documentation in R/vse.R
 \name{vse}
 \alias{vse}
-\title{Calculate variance scaling exponent}
+\title{Variance Scale Exponent}
 \usage{
 vse(x, m = 0.5)
 }
@@ -12,13 +12,13 @@ vse(x, m = 0.5)
 \item{m}{A parameter to control the number of scales. Default is 0.5.}
 }
 \value{
-The variance scaling exponent.
+A list containing the variance scaling exponent.
 }
 \description{
-Calculate variance scaling exponent
+Calculate the variance scaling exponent of a time series.
 }
 \examples{
+set.seed(123)
 x <- rnorm(1024)
 vse(x)
-
 }

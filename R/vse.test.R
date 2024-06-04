@@ -1,16 +1,14 @@
-#' Use the variance scale exponent method to construct a hypothesis test about long memory in time series
-#'
+#' @title Variance Scale Exponent Test
+#' @description
+#' Use the variance scale exponent method to construct a hypothesis test about long memory in time series.
 #' @param x A time series vector.
 #' @param m A parameter to control the number of scales. Default is 0.5.
-#'
 #' @return A list containing the statistic, degree of freedom, and p-value.
-#'
 #' @examples
+#' set.seed(123)
 #' x <- rnorm(1024)
 #' vse.test(x)
-#'
 #' @importFrom stats pchisq var
-#'
 #' @export
 vse.test<-function(x, m=0.5){
     # 确保输入参数为数值类型
