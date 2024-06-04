@@ -20,4 +20,5 @@ Calculate variance scaling exponents
 \examples{
 x <- rnorm(1024)
 vse(x)
+
 }

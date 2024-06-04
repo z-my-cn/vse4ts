@@ -2,3 +2,6 @@
 
 export(vse)
 export(vse.test)
+importFrom(stats,nlminb)
+importFrom(stats,pchisq)
+importFrom(stats,var)

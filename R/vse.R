@@ -8,6 +8,9 @@
 #' @examples
 #' x <- rnorm(1024)
 #' vse(x)
+#'
+#' @importFrom stats nlminb var
+#'
 #' @export
 vse <- function(x, m=0.5) {
     # 确保输入参数为数值类型
@@ -54,7 +57,7 @@ vse <- function(x, m=0.5) {
 
     # 使用非线性最小二乘法进行参数估计
     # use nonlinear least squares to estimate parameters
-    out <- stats::nlminb(c(1, 0.5), fn, x = ts$tsn, y = ts$tsvar / ts$tsvar[1])
+    out <- nlminb(c(1, 0.5), fn, x = ts$tsn, y = ts$tsvar / ts$tsvar[1])
 
     # 返回估计得到的参数
     # return the estimated parameters

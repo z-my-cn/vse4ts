@@ -2,10 +2,10 @@ Package: vse4ts
 Title: Identify Memory Patterns in Time Series Using VSE
 Version: 0.0.0.9001
 Authors@R: c(
-    person(given = "Mengyang", family = "Zheng", email = "meyazheng@163.com", role = c("aut", "cre")),
+    person(given = "Mengyang", family = "Zheng", email = "mengyang.zheng@outlook.com", role = c("aut", "cre")),
     person(given = "Hui", family = "Fu", email = "hui_fu@hotmail.com", role = c("aut"))
     )
-Description: Constructing strong and weak variance scaling exponents, it 
+Description: Constructing variance scaling exponents, it 
     achieves the identification of memory patterns in time series, especially 
     the identification of long memory.
 License: MIT + file LICENSE

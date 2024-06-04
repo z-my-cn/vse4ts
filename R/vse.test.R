@@ -8,6 +8,9 @@
 #' @examples
 #' x <- rnorm(1024)
 #' vse.test(x)
+#'
+#' @importFrom stats pchisq var
+#'
 #' @export
 vse.test<-function(x, m=0.5){
     # 确保输入参数为数值类型

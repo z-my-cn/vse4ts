@@ -20,4 +20,5 @@ Use the variance scale exponent method to construct a hypothesis test about long
 \examples{
 x <- rnorm(1024)
 vse.test(x)
+
 }
