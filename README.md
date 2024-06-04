@@ -4,7 +4,7 @@ vse4ts
 <!-- badges: start -->
 <!-- badges: end -->
 
-# vse4ts
+## Introduction
 
 The goal of vse4ts is to identify memory patterns in time series using
 variance scaling exponents. It constructs variance scaling exponents,
