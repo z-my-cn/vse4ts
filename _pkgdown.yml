@@ -1,6 +1,7 @@
 url: https://z-my-cn.github.io/vse4ts/
 template:
   bootstrap: 5
+<<<<<<< HEAD
   bootswatch: yeti
   repo:
     url:
@@ -11,3 +12,6 @@ navbar:
       text: "Github"
       icon: fa-github
       href: https://github.com/z-my-cn/vse4ts
+=======
+
+>>>>>>> a7b72abb7ccc74dbe735c44c1e2763d8df2c24e8
