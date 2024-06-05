@@ -12,7 +12,10 @@ vse.test(x, m = 0.5)
 \item{m}{A parameter to control the number of scales. Default is 0.5.}
 }
 \value{
-A list containing the statistic, degree of freedom, and p-value.
+A list with class "vsetest" containing the following components:
+\item{statistic}{the value of the test statistic.}
+\item{df}{the degrees of freedom of the test.}
+\item{p.value}{the p-value of the test.}
 }
 \description{
 Use the variance scale exponent method to construct a hypothesis test about long memory in time series.
@@ -21,4 +24,7 @@ Use the variance scale exponent method to construct a hypothesis test about long
 set.seed(123)
 x <- rnorm(1024)
 vse.test(x)
+}
+\references{
+Fu, H., Chen, W., & He, X.-J. (2018). On a class of estimation and test for long memory. In Physica A: Statistical Mechanics and its Applications (Vol. 509, pp. 906–920). Elsevier BV. https://doi.org/10.1016/j.physa.2018.06.092
 }

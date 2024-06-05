@@ -12,7 +12,7 @@ vse(x, m = 0.5)
 \item{m}{A parameter to control the number of scales. Default is 0.5.}
 }
 \value{
-A list containing the variance scaling exponent.
+The variance scaling exponent.
 }
 \description{
 Calculate the variance scaling exponent of a time series.
@@ -21,4 +21,7 @@ Calculate the variance scaling exponent of a time series.
 set.seed(123)
 x <- rnorm(1024)
 vse(x)
+}
+\references{
+Fu, H., Chen, W., & He, X.-J. (2018). On a class of estimation and test for long memory. In Physica A: Statistical Mechanics and its Applications (Vol. 509, pp. 906–920). Elsevier BV. https://doi.org/10.1016/j.physa.2018.06.092
 }

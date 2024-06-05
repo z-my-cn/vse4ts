@@ -3,13 +3,13 @@
 #' Calculate the variance scaling exponent of a time series.
 #' @param x A time series vector.
 #' @param m A parameter to control the number of scales. Default is 0.5.
-#' @return A list containing the variance scaling exponent.
+#' @return The variance scaling exponent.
+#' @references
+#' Fu, H., Chen, W., & He, X.-J. (2018). On a class of estimation and test for long memory. In Physica A: Statistical Mechanics and its Applications (Vol. 509, pp. 906–920). Elsevier BV. https://doi.org/10.1016/j.physa.2018.06.092
 #' @examples
 #' set.seed(123)
 #' x <- rnorm(1024)
 #' vse(x)
-#' @importFrom stats nlminb var
-#'
 #' @export
 vse <- function(x, m=0.5) {
     # 确保输入参数为数值类型
@@ -60,7 +60,7 @@ vse <- function(x, m=0.5) {
 
     # 返回估计得到的参数
     # return the estimated parameters
-    return(list(vse=out$par[2]))
+    return(out$par[2])
 }
 
 

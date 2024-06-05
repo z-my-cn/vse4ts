@@ -32,7 +32,6 @@ set.seed(123)
 x <- rnorm(1024)
 x.vse <- vse(x)
 print(x.vse)
-#> $vse
 #> [1] 0.4987233
 ```
 
@@ -45,14 +44,17 @@ set.seed(123)
 x <- rnorm(1024)
 x.vse.test <- vse.test(x)
 print(x.vse.test)
-#> $Statistic
+#> $statistic
 #> [1] 29.06849
 
-#> $Degree
+#> $df
 #> [1] 31
 
-#> $Pvalue
+#> $p.value
 #> [1] 0.4343341
+
+#> attr(,"class")
+#> [1] "vsetest"
 ```
 
 ## License
