@@ -19,8 +19,14 @@ Calculate the variance scaling exponent of a time series.
 }
 \examples{
 set.seed(123)
-x <- rnorm(1024)
+x <- rnorm(1024) # Generate a random time series
 vse(x)
+
+# Compare the result with the Hurst exponent
+library(pracma)
+data("brown72")  # Load the Brown72 data set
+hurstexp(brown72) # Calculate the Hurst exponent
+vse(brown72) # Calculate the variance scaling exponent
 }
 \references{
 Fu, H., Chen, W., & He, X.-J. (2018). On a class of estimation and test for long memory. In Physica A: Statistical Mechanics and its Applications (Vol. 509, pp. 906–920). Elsevier BV. https://doi.org/10.1016/j.physa.2018.06.092
