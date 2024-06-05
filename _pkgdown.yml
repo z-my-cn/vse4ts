@@ -1,0 +1,13 @@
+url: https://z-my-cn.github.io/vse4ts/
+template:
+  bootstrap: 5
+  bootswatch: yeti
+  repo:
+    url:
+      issue: https://github.com/z-my-cn/vse4ts
+navbar:
+  components:
+    github:
+      text: "Github"
+      icon: fa-github
+      href: https://github.com/z-my-cn/vse4ts
