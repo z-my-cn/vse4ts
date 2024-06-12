@@ -47,7 +47,7 @@ vse.test<-function(x, m=0.5){
     # calculate the test statistic, degree of freedom, and p-value
     SLmemory <-(floor(N/n)-1)*varTS(n)/(varTS(n+1)-varTS(n))/n
     Degr<-floor(N/n)-1
-    Pvalue<-min(pchisq(Sta,Degr),1-pchisq(Sta,Degr))
+    Pvalue<-min(pchisq(SLmemory, Degr),1-pchisq(SLmemory, Degr))
 
     # 返回检验统计量，自由度和p值
     # return the test statistic, degree of freedom, and p-value
