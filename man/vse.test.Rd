@@ -13,7 +13,7 @@ vse.test(x, m = 0.5)
 }
 \value{
 A list with class "vsetest" containing the following components:
-\item{statistic}{the value of the test statistic.}
+\item{SLmemory}{the test statistic of the Short-Long memory test.}
 \item{df}{the degrees of freedom of the test.}
 \item{p.value}{the p-value of the test.}
 }

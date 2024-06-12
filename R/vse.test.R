@@ -4,7 +4,7 @@
 #' @param x A time series vector.
 #' @param m A parameter to control the number of scales. Default is 0.5.
 #' @return A list with class "vsetest" containing the following components:
-#' \item{statistic}{the value of the test statistic.}
+#' \item{SLmemory}{the test statistic of the Short-Long memory test.}
 #' \item{df}{the degrees of freedom of the test.}
 #' \item{p.value}{the p-value of the test.}
 #' @references
@@ -45,7 +45,7 @@ vse.test<-function(x, m=0.5){
 
     # 计算检验统计量，自由度和p值
     # calculate the test statistic, degree of freedom, and p-value
-    Sta<-(floor(N/n)-1)*varTS(n)/(varTS(n+1)-varTS(n))/n
+    SLmemory <-(floor(N/n)-1)*varTS(n)/(varTS(n+1)-varTS(n))/n
     Degr<-floor(N/n)-1
     Pvalue<-min(pchisq(Sta,Degr),1-pchisq(Sta,Degr))
 
@@ -53,7 +53,7 @@ vse.test<-function(x, m=0.5){
     # return the test statistic, degree of freedom, and p-value
     # list(Sta=Sta,Degr=Degr,Pvalue=Pvalue)
     # return(list(Pvalue=Pvalue))
-    result <- list(statistic=Sta, df=Degr, p.value=Pvalue)
+    result <- list(SLmemory=SLmemory, df=Degr, p.value=Pvalue)
     class(result) <- "vsetest"
     return(result)
 }
