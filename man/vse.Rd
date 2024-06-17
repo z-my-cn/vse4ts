@@ -4,29 +4,44 @@
 \alias{vse}
 \title{Variance Scale Exponent}
 \usage{
-vse(x, m = 0.5)
+vse(x, m = 0.5, type = c("weak", "strong"))
 }
 \arguments{
 \item{x}{A time series vector.}
 
 \item{m}{A parameter to control the number of scales. Default is 0.5.}
+
+\item{type}{The type of variance scale exponent. Default is "weak".}
 }
 \value{
-The variance scaling exponent.
+The variance scale exponent.
 }
 \description{
-Calculate the variance scaling exponent of a time series.
+Calculate the variance scale exponent of a time series.
 }
 \examples{
+## Compute the variance scale exponent of a time series
+# Generate a random time series
 set.seed(123)
-x <- rnorm(1024) # Generate a random time series
+x <- rnorm(1024) # F = H = 0.5 also d = 0
 vse(x)
 
-# Compare the result with the Hurst exponent
+## Compare the result with the Hurst exponent
 library(pracma)
-data("brown72")  # Load the Brown72 data set
-hurstexp(brown72) # Calculate the Hurst exponent
-vse(brown72) # Calculate the variance scaling exponent
+
+# A time series with Hurst exponent 0.72
+data("brown72")
+x <- brown72     # F = H = 0.72 also d = 0.22
+hurstexp(x)
+vse(x)
+
+# A time series with Hurst exponent 0.43
+xlm <- numeric(1024); xlm[1] <- 0.1
+for (i in 2:1024) xlm[i] <- 4 * xlm[i-1] * (1 - xlm[i-1])
+x <- xlm         # F = H = 0.43 also d = -0.07
+hurstexp(x)
+vse(x)
+
 }
 \references{
 Fu, H., Chen, W., & He, X.-J. (2018). On a class of estimation and test for long memory. In Physica A: Statistical Mechanics and its Applications (Vol. 509, pp. 906–920). Elsevier BV. https://doi.org/10.1016/j.physa.2018.06.092
