@@ -63,7 +63,11 @@
 </h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of vse4ts is to …</p>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<p>The goal of vse4ts is to identify memory patterns in time series using variance scaling exponent. It constructs variance scaling exponent, achieving the identification of memory patterns in time series, especially long memory.</p>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -75,10 +79,47 @@
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>Here is a basic example of how to use the <code>vse</code> function in the vse4ts package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://z-my-cn.github.io/vse4ts/">vse4ts</a></span><span class="op">)</span></span>
-<span><span class="co">## basic example code</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">1024</span><span class="op">)</span></span>
+<span><span class="va">x.vse</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/vse.html">vse</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">x.vse</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 0.4987233</span></span></code></pre></div>
+<p>This package also provides two hypothesis test functions <code>Wnoise.test</code> and <code>SLmemory.test</code> to test the white noise and short/long memory of a time series, respectively. Here is an example of how to use the <code>Wnoise.test</code> function and <code>SLmemory.test</code> function in the vse4ts package:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://z-my-cn.github.io/vse4ts/">vse4ts</a></span><span class="op">)</span></span>
+<span><span class="co"># install.packages("pracma")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">pracma</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"brown72"</span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">brown72</span></span>
+<span></span>
+<span><span class="co"># Test white noise</span></span>
+<span><span class="fu"><a href="reference/Wnoise.test.html">Wnoise.test</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Wnoise Test</span></span>
+<span><span class="co">#&gt;</span></span>
+<span><span class="co">#&gt; Wnoise statistic: 135.1091</span></span>
+<span><span class="co">#&gt; degrees of freedom: 31</span></span>
+<span><span class="co">#&gt; p-value: 5.884182e-15</span></span>
+<span><span class="co">#&gt;</span></span>
+<span><span class="co">#&gt; alternative hypothesis: non-independent stochastic process</span></span>
+<span></span>
+<span><span class="co"># Test long memory</span></span>
+<span><span class="fu"><a href="reference/SLmemory.test.html">SLmemory.test</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; SLmemory Test</span></span>
+<span><span class="co">#&gt;</span></span>
+<span><span class="co">#&gt; SLmemory statistic: 21.20841</span></span>
+<span><span class="co">#&gt; degrees of freedom: 31</span></span>
+<span><span class="co">#&gt; p-value: 0.09369624</span></span>
+<span><span class="co">#&gt;</span></span>
+<span><span class="co">#&gt; alternative hypothesis: long memory</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
+</h2>
+<p>MIT © 2024 vse4ts authors</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
