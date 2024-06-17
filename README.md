@@ -35,26 +35,39 @@ print(x.vse)
 #> [1] 0.4987233
 ```
 
-This package also provides a hypothesis test function `vse.test` to test
-the long memory in time series:
+This package also provides two hypothesis test functions `Wnoise.test`
+and `SLmemory.test` to test the white noise and short/long memory of a
+time series, respectively. Here is an example of how to use the
+`Wnoise.test` function and `SLmemory.test` function in the vse4ts
+package:
 
 ``` r
 library(vse4ts)
-set.seed(123)
-x <- rnorm(1024)
-x.vse.test <- vse.test(x)
-print(x.vse.test)
-#> $statistic
-#> [1] 29.06849
+# install.packages("pracma")
+library(pracma)
 
-#> $df
-#> [1] 31
+data("brown72")
+x <- brown72
 
-#> $p.value
-#> [1] 0.4343341
+# Test white noise
+Wnoise.test(x)
+#> Wnoise Test
+#>
+#> Wnoise statistic: 135.1091
+#> degrees of freedom: 31
+#> p-value: 5.884182e-15
+#>
+#> alternative hypothesis: non-independent stochastic process
 
-#> attr(,"class")
-#> [1] "vsetest"
+# Test long memory
+SLmemory.test(x)
+#> SLmemory Test
+#>
+#> SLmemory statistic: 21.20841
+#> degrees of freedom: 31
+#> p-value: 0.09369624
+#>
+#> alternative hypothesis: long memory
 ```
 
 ## License
