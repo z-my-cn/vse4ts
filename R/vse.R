@@ -1,4 +1,4 @@
-#' @title Variance Scale Exponent
+#' @title Calculate the Variance Scale Exponent of a Time Series
 #' @description
 #' Calculate the variance scale exponent of a time series.
 #' @param x A time series vector.

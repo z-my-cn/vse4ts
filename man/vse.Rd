@@ -2,7 +2,7 @@
 % Please edit documentation in R/vse.R
 \name{vse}
 \alias{vse}
-\title{Variance Scale Exponent}
+\title{Calculate the Variance Scale Exponent of a Time Series}
 \usage{
 vse(x, m = 0.5, type = c("weak", "strong"))
 }
