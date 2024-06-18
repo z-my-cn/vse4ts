@@ -10,6 +10,7 @@ Description: Constructing variance scale exponent, it achieves the
     long memory.
 License: MIT + file LICENSE
 URL: https://z-my-cn.github.io/vse4ts/
+BugReports: https://github.com/z-my-cn/vse4ts/issues
 Imports: 
     stats
 Suggests: 

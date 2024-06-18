@@ -12,6 +12,7 @@ Constructing variance scale exponent, it achieves the identification of memory p
 Useful links:
 \itemize{
   \item \url{https://z-my-cn.github.io/vse4ts/}
+  \item Report bugs at \url{https://github.com/z-my-cn/vse4ts/issues}
 }
 
 }

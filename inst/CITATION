@@ -1,0 +1,13 @@
+bibentry(
+  bibtype  = "Article",
+  title    = "On a class of estimation and test for long memory",
+  author   = c(person(given = "Hui", family = "Fu"),
+               person(given = "Wenting", family = "Chen"),
+               person(given = "Xin-Jiang", family = "He")),
+  journal  = "Physica A: Statistical Mechanics and its Applications",
+  year     = 2018,
+  volume   = 509,
+  pages    = "906-920",
+  doi      = "10.1016/j.physa.2018.06.092",
+  header   = "To cite {vse4ts} in publications use:"
+)
