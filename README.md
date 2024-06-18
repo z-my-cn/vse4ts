@@ -7,7 +7,7 @@ vse4ts
 ## Introduction
 
 The goal of vse4ts is to identify memory patterns in time series using
-variance scaling exponent. It constructs variance scaling exponent,
+variance scale exponent. It constructs variance scale exponent,
 achieving the identification of memory patterns in time series,
 especially long memory.
 

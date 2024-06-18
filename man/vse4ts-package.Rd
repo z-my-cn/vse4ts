@@ -4,9 +4,9 @@
 \name{vse4ts-package}
 \alias{vse4ts}
 \alias{vse4ts-package}
-\title{vse4ts: Identify Memory Patterns in Time Series Using VSE}
+\title{vse4ts: Identify Memory Patterns in Time Series Using Variance Scale Exponent}
 \description{
-Constructing variance scale exponent, it achieves the identification of memory patterns in time series, especially the identification of long memory.
+Constructing variance scale exponent, it achieves the identification of memory patterns in time series, especially for long memory.
 }
 \seealso{
 Useful links:
