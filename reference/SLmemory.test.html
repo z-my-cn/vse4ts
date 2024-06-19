@@ -52,7 +52,7 @@ The null hypothesis is that the time series is white noise or short memory, whil
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">SLmemory.test</span><span class="op">(</span><span class="va">x</span>, m <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">SLmemory.test</span><span class="op">(</span><span class="va">x</span>, m <span class="op">=</span> <span class="fl">0.5</span>, n <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -63,6 +63,10 @@ The null hypothesis is that the time series is white noise or short memory, whil
 
 <dt>m</dt>
 <dd><p>A parameter to control the number of scales. Default is 0.5.</p></dd>
+
+
+<dt>n</dt>
+<dd><p>The number of scales. If <code>NULL</code>, it will be calculated as <code>floor(N^m)</code>.</p></dd>
 
 </dl></div>
     <div class="section level2">
