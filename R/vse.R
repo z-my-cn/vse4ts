@@ -3,6 +3,7 @@
 #' Calculate the variance scale exponent of a time series.
 #' @param x A time series vector.
 #' @param m A parameter to control the number of scales. Default is 0.5.
+#' @param n The number of scales. If `NULL`, it will be calculated as `floor(N^m)`.
 #' @param type The type of variance scale exponent. Default is "weak".
 #' @return The variance scale exponent.
 #' @references
@@ -31,7 +32,7 @@
 #' vse(x)
 #'
 #' @export
-vse <- function(x, m=0.5, type=c("weak", "strong")){
+vse <- function(x, m=0.5, n = NULL, type=c("weak", "strong")){
     # 确保输入参数符合要求
     stopifnot(is.numeric(x), is.numeric(m))
     type <- match.arg(type)
@@ -39,7 +40,12 @@ vse <- function(x, m=0.5, type=c("weak", "strong")){
     # 计算需要的迭代次数
     # calculate the number of iterations needed
     N <- length(x)
-    n <- floor(N^m)
+    # n <- floor(N^m)
+    if (is.null(n)) {
+        n <- floor(N^m)
+    } else {
+        stopifnot(is.numeric(n), n > 0, n == as.integer(n))
+    }
 
     # 内部函数，计算时间序列的方差
     # inner function, calculate the variance of the time series
@@ -109,6 +115,7 @@ vse <- function(x, m=0.5, type=c("weak", "strong")){
 #' The null hypothesis is that the time series is independent white noise, while the alternative hypothesis is that the time series is a non-independent stochastic process.
 #' @param x A time series vector.
 #' @param m A parameter to control the number of scales. Default is 0.5.
+#' @param n The number of scales. If `NULL`, it will be calculated as `floor(N^m)`.
 #' @return A list with class "Wnoise.test" containing the following components:
 #' \item{Wnoise}{the test statistic }
 #' \item{df}{the degrees of freedom of the test.}
@@ -130,7 +137,7 @@ vse <- function(x, m=0.5, type=c("weak", "strong")){
 #' Wnoise.test(xlm)
 #'
 #' @export
-Wnoise.test<-function(x, m=0.5){
+Wnoise.test<-function(x, m=0.5, n = NULL){
     # 确保输入参数为数值类型
     # ensure the input parameters are numeric
     stopifnot(is.numeric(x), is.numeric(m))
@@ -138,7 +145,12 @@ Wnoise.test<-function(x, m=0.5){
     # 计算需要的迭代次数
     # calculate the number of iterations needed
     N <- length(x)
-    n <- floor(N^m)
+    # n <- floor(N^m)
+    if (is.null(n)) {
+        n <- floor(N^m)
+    } else {
+        stopifnot(is.numeric(n), n > 0, n == as.integer(n))
+    }
 
     # 内部函数，计算时间序列的方差
     # inner function, calculate the variance of the time series
@@ -197,6 +209,7 @@ print.Wnoise.test <- function(x, ...) {
 #' The null hypothesis is that the time series is white noise or short memory, while the alternative hypothesis is that the time series has long memory.
 #' @param x A time series vector.
 #' @param m A parameter to control the number of scales. Default is 0.5.
+#' @param n The number of scales. If `NULL`, it will be calculated as `floor(N^m)`.
 #' @return A list with class "SLmemory.test" containing the following components:
 #' \item{SLmemory}{the test statistic }
 #' \item{df}{the degrees of freedom of the test.}
@@ -218,7 +231,7 @@ print.Wnoise.test <- function(x, ...) {
 #' SLmemory.test(xlm)
 #'
 #' @export
-SLmemory.test<-function(x, m=0.5){
+SLmemory.test<-function(x, m=0.5, n = NULL){
     # 确保输入参数为数值类型
     # ensure the input parameters are numeric
     stopifnot(is.numeric(x), is.numeric(m))
@@ -226,7 +239,12 @@ SLmemory.test<-function(x, m=0.5){
     # 计算需要的迭代次数
     # calculate the number of iterations needed
     N <- length(x)
-    n <- floor(N^m)
+    # n <- floor(N^m)
+    if (is.null(n)) {
+        n <- floor(N^m)
+    } else {
+        stopifnot(is.numeric(n), n > 0, n == as.integer(n))
+    }
 
     # 内部函数，计算时间序列的方差
     # inner function, calculate the variance of the time series

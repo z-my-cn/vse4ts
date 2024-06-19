@@ -4,12 +4,14 @@
 \alias{Wnoise.test}
 \title{Testing White Noise in Time Series}
 \usage{
-Wnoise.test(x, m = 0.5)
+Wnoise.test(x, m = 0.5, n = NULL)
 }
 \arguments{
 \item{x}{A time series vector.}
 
 \item{m}{A parameter to control the number of scales. Default is 0.5.}
+
+\item{n}{The number of scales. If \code{NULL}, it will be calculated as \code{floor(N^m)}.}
 }
 \value{
 A list with class "Wnoise.test" containing the following components:

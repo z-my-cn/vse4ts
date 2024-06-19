@@ -4,12 +4,14 @@
 \alias{SLmemory.test}
 \title{Testing Long Memory in Time Series}
 \usage{
-SLmemory.test(x, m = 0.5)
+SLmemory.test(x, m = 0.5, n = NULL)
 }
 \arguments{
 \item{x}{A time series vector.}
 
 \item{m}{A parameter to control the number of scales. Default is 0.5.}
+
+\item{n}{The number of scales. If \code{NULL}, it will be calculated as \code{floor(N^m)}.}
 }
 \value{
 A list with class "SLmemory.test" containing the following components:

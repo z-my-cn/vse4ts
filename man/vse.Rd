@@ -4,12 +4,14 @@
 \alias{vse}
 \title{Calculate the Variance Scale Exponent of a Time Series}
 \usage{
-vse(x, m = 0.5, type = c("weak", "strong"))
+vse(x, m = 0.5, n = NULL, type = c("weak", "strong"))
 }
 \arguments{
 \item{x}{A time series vector.}
 
 \item{m}{A parameter to control the number of scales. Default is 0.5.}
+
+\item{n}{The number of scales. If \code{NULL}, it will be calculated as \code{floor(N^m)}.}
 
 \item{type}{The type of variance scale exponent. Default is "weak".}
 }
