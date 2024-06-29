@@ -12,7 +12,7 @@ The null hypothesis is that the time series is independent white noise, while th
     
     <a class="navbar-brand me-2" href="../index.html">vse4ts</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9002</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,6 +94,7 @@ The null hypothesis is that the time series is independent white noise, while th
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Test white noise in time series</span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">pracma</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"brown72"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">x72</span> <span class="op">&lt;-</span> <span class="va">brown72</span>                          <span class="co">#  H = 0.72</span></span></span>
 <span class="r-in"><span><span class="va">xgn</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">1024</span><span class="op">)</span>                      <span class="co">#  H = 0.50</span></span></span>
@@ -111,9 +112,9 @@ The null hypothesis is that the time series is independent white noise, while th
 <span class="r-in"><span><span class="fu">Wnoise.test</span><span class="op">(</span><span class="va">xgn</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Wnoise Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Wnoise statistic: 38.0022 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Wnoise statistic: 27.9873 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> degrees of freedom: 31 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> p-value: 0.1805492 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> p-value: 0.3781797 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: non-independent stochastic process</span>
 <span class="r-in"><span><span class="fu">Wnoise.test</span><span class="op">(</span><span class="va">xlm</span><span class="op">)</span></span></span>
