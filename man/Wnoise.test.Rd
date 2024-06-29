@@ -27,6 +27,7 @@ The null hypothesis is that the time series is independent white noise, while th
 ## Test white noise in time series
 library(pracma)
 
+set.seed(123)
 data("brown72")
 x72 <- brown72                          #  H = 0.72
 xgn <- rnorm(1024)                      #  H = 0.50

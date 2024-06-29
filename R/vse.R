@@ -126,6 +126,7 @@ vse <- function(x, m=0.5, n = NULL, type=c("weak", "strong")){
 #' ## Test white noise in time series
 #' library(pracma)
 #'
+#' set.seed(123)
 #' data("brown72")
 #' x72 <- brown72                          #  H = 0.72
 #' xgn <- rnorm(1024)                      #  H = 0.50
@@ -220,6 +221,7 @@ print.Wnoise.test <- function(x, ...) {
 #' ## Test long memory in time series
 #' library(pracma)
 #'
+#' set.seed(123)
 #' data("brown72")
 #' x72 <- brown72                          #  H = 0.72
 #' xgn <- rnorm(1024)                      #  H = 0.50
