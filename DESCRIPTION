@@ -1,6 +1,6 @@
 Package: vse4ts
 Title: Identify Memory Patterns in Time Series Using Variance Scale Exponent
-Version: 0.0.0.9002
+Version: 1.0.0
 Authors@R: c(
     person("Mengyang", "Zheng", , "mengyang.zheng@outlook.com", role = c("aut", "cre")),
     person("Hui", "Fu", , "hui_fu@hotmail.com", role = "aut")
