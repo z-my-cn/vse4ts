@@ -6,15 +6,15 @@ vse4ts
 
 ## Introduction
 
-The goal of vse4ts is to identify memory patterns in time series using
-variance scale exponent. It constructs variance scale exponent,
-achieving the identification of memory patterns in time series,
-especially long memory.
+Methods for calculating the variance scale exponent to identify memory
+patterns in time series data. Includes tests for white noise, short
+memory, and long memory. See Fu, H. et
+al. (2018)\<<doi:10.1016/j.physa.2018.06.092>\>.
 
 ## Installation
 
 You can install the development version of vse4ts from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/z-my-cn/vse4ts) with:
 
 ``` r
 # install.packages("devtools")

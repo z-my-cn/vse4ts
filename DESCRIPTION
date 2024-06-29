@@ -5,17 +5,17 @@ Authors@R: c(
     person("Mengyang", "Zheng", , "mengyang.zheng@outlook.com", role = c("aut", "cre")),
     person("Hui", "Fu", , "hui_fu@hotmail.com", role = "aut")
   )
-Description: Constructing variance scale exponent, it achieves the
-    identification of memory patterns in time series, especially for
-    long memory.
+Description: Methods for calculating the variance scale exponent to
+    identify memory patterns in time series data. Includes tests for white
+    noise, short memory, and long memory. See Fu, H. et al. (2018)
+    <doi:10.1016/j.physa.2018.06.092>.
 License: MIT + file LICENSE
 URL: https://z-my-cn.github.io/vse4ts/
 BugReports: https://github.com/z-my-cn/vse4ts/issues
 Imports: 
     stats
 Suggests: 
-    pracma,
-    testthat (>= 3.0.0)
+    pracma
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
